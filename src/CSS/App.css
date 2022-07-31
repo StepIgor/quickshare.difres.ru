@@ -1,0 +1,150 @@
+.container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+}
+
+.logo-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    gap: 6px;
+    color: var(--cyan);
+    user-select: none;
+}
+
+.logo-container > i {
+    font-size: 48px;
+}
+
+.logo-container > span {
+    font-size: 36px;
+}
+
+.about-container > a {
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+    color: gray;
+    text-decoration: underline;
+}
+
+@media (prefers-color-scheme: light){
+    .container {
+        background: var(--background);
+    }
+
+    .id-input-container > input {
+        color: black;
+    }
+
+    .search-status-label {
+        color: black;
+    }
+
+    .direct-link-result-container > span {
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    .container {
+        background: var(--dark_background);
+    }
+
+    .id-input-container > input {
+        color: white;
+    }
+
+    .search-status-label {
+        color: white;
+    }
+
+    .direct-link-result-container > span {
+        color: white;
+    }
+}
+
+.id-input-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.id-input-container > input {
+    font-size: 24px;
+    text-align: center;
+    padding: 8px 0;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    border-bottom: 2px solid grey;
+}
+
+.id-input-container > button {
+    background: var(--cyan);
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 12px 0;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+}
+
+.id-input-container > button:hover {
+    background: #80deea;
+}
+
+.invalid-warn {
+    color: red;
+    font-size: 12px;
+    padding: 12px 0;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+}
+
+.search-status-label {
+    font-size: 16px;
+    text-align: center;
+}
+
+.direct-link-result-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.direct-link-result-container > span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.direct-link-result-container > a {
+    text-decoration: none;
+    cursor:pointer;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    background: var(--cyan);
+    color: white;
+    text-transform: uppercase;
+}
+
+.direct-link-result-container > a:hover {
+    background: #80deea;
+}
