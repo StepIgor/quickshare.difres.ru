@@ -21,8 +21,9 @@ function App() {
         if (id == null || id.toString().length < 1) return;
         setFileWasFoundBool(null);
         fetch('/share/' + id, {
-            method: 'GET'
+            method: 'HEAD'
         }).then(res => {
+            console.log(res)
             if (res.status != 200){
                 setFileWasFoundBool(false);
                 setConnectionErrorBool(false);
