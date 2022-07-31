@@ -36,7 +36,7 @@ function App() {
     }, [id])
 
     function parseFileIdFromUrl(){
-        let parts = window.location.href.split('/').filter(p => p != '' && p.indexOf(':') == -1);
+        let parts = window.location.href.split('/').filter(p => p != '' && p.indexOf(':') == -1 && p.toLowerCase() != 'quickshare.difres.ru');
         if (parts.length > 0) {
             setId(parts[0])
         } else {
